@@ -12,9 +12,9 @@ namespace InterfaceExercise
         public string Color { get; set; }
 
         public double MarketShareValue { get; set; }
-        public string Make { get; set; } = "Toyota";
+        public string Make { get; set; }
 
-        public string Carsize { get; set; }
+        public string CarSize { get; set; }
         public string CarLiscenseNum { get; set; }
 
     }

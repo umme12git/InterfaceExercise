@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 
 
@@ -43,7 +44,7 @@ namespace InterfaceExercise
             //Creatively display and organize their values
             var car = new Car();
             car.CarLiscenseNum = "239 GDK";
-            car.Carsize = "Medum Small";
+            car.CarSize = "Medum Small";
             car.Color = "Red";
             car.DoorNum = 4;
             car.WheelNum = 4;
@@ -71,19 +72,39 @@ namespace InterfaceExercise
             suv.MarketShareValue = 33.29;
             suv.Make = "Honda";
 
+
+
             var vehicles = new List<Ivehicle>();
             vehicles.Add(car);
             vehicles.Add(suv);
             vehicles.Add(truck);
+            var objcast1 = (vehicles[0] as Car);
+            var objcast2 = (vehicles[1] as SUV);
+            var objcast3 = (vehicles[2] as Truck);
+
+                 
             
-            Console.WriteLine("******");
+            int i = 0;
             foreach (var things in vehicles)
             {
+                Console.WriteLine("*******");
                 Console.WriteLine($"{things.ModelName} -- has {things.WheelNum} wheels  {things.DoorNum} doors  {things.Color} color");
+                
                 Console.WriteLine();
-                Console.WriteLine();
+                i++;
             }
-
+            Console.WriteLine("*********************************");
+            Console.WriteLine("Other properties of the vehicles");
+            Console.WriteLine("*********************************");
+            Console.WriteLine();
+            Console.WriteLine("***Car***");
+            Console.WriteLine($"{objcast1.Make}  {objcast1.CarLiscenseNum} with size {objcast1.CarSize} has market share value {objcast1.MarketShareValue}");
+            Console.WriteLine();
+            Console.WriteLine("***SUV***");
+            Console.WriteLine($"{objcast2.Make}  {objcast2.CarLiscenseNum} with size {objcast2.CarSize} has market share value {objcast2.MarketShareValue}");
+            Console.WriteLine();
+            Console.WriteLine("***Truck***");
+            Console.WriteLine($"{objcast3.Make}  {objcast3.CarLiscenseNum} with size {objcast3.CarSize} has market share value {objcast3.MarketShareValue}");
 
 
         }

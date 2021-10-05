@@ -4,12 +4,12 @@ using System.Text;
 
 namespace InterfaceExercise
 {
-    public interface Ivehicle
+    interface Ivehicle
     {
-        public int WheelNum { get; set; }
-        public int DoorNum { get; set; }
-        public string ModelName { get; set; }
-        public string Color { get; set; }
+        int WheelNum { get; set; }
+        int DoorNum { get; set; }
+        string ModelName { get; set; }
+        string Color { get; set; }
         
     }
 }
